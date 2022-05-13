@@ -1,0 +1,102 @@
+:root{
+    --clr-neon:             hsl(305, 100%, 66%);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    box-sizing:             border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing:             inherit;
+}
+body {
+    margin:                 0;
+    overflow:               hidden;
+    color:            		var(--clr-neon);
+}
+header{
+    background-color: 		#000000;
+    width:              	100%;
+    height:             	75px;
+    display: 				flex;
+	font-size:          	175%;
+	list-style: 			none;
+} 
+header .container{
+    display: 				flex;
+    align-items: 			center;
+	height:					100%;
+	padding-left: 		    10px;
+	padding-right: 		    10px;
+}
+header .top-menu{
+	padding: 				5px;
+	margin:					5px;
+	text-align:				center;
+	display:				flex;
+	list-style: 			none;
+	padding-left: 		    10px;
+	padding-right: 		    10px;
+}
+header .top-menu ul{
+	display:				flex;
+	padding-left: 		    10px;
+	padding-right: 		    10px;
+}
+header .top-menu li a{
+	padding-left: 		    10px;
+	padding-right: 		    10px;
+	display: 				inline;
+}
+header .top-menu li:first-child a{
+	padding-left: 			5px;
+}
+.neon-button{
+    display:                inline-block;
+    cursor:                 pointer;
+    text-decoration:        none;
+    color:            		var(--clr-neon);
+
+    border:                 currentColor     0.125em     solid;
+    padding:                0.25em 1em;
+    border-radius:          0.25em;
+
+    text-shadow:            0 0 0.8em currentColor;
+    box-shadow:            inset 0 0 0.5em 0 currentColor,  0 0 0.5em 0 currentColor;
+
+}
+.logo-img{
+	margin: 				0px;
+	padding: 				0px;
+	height:             	70px;
+	border-radius:			50%;
+}
+
+/* The conetent conatiner is relative, it's contents are absolute. Use z-index. */
+/*.content {
+    display:                flex; 
+     grid-template-columns:  1rem 125px 1rem; 
+    grid-template-areas: 
+      "content-l center-img content-r"; 
+    position:               absolute; 
+}*/
+canvas{
+  position:                 absolute;
+  z-index:                  1;
+}
+.center-img{
+    z-index:                10;
+    display:                block;
+    margin-left:            auto;
+    margin-right:           auto;
+	height:             	125px;
+    grid-area:              "center-img";
+}
+.content .content-l{
+    z-index:                10;
+}
+p{
+    color:                  var(--clr-neon);
+}
